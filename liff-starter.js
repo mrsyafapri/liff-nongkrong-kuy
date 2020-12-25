@@ -113,7 +113,6 @@ function registerButtonHandlers() {
 
     document.getElementById('liffLoginButton').addEventListener('click', function() {
         if (!liff.isLoggedIn()) {
-            document.write("Anda beum login. Silahkan Login Dulu")
             liff.login();
         }
     });
