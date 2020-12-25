@@ -98,7 +98,7 @@ function displayIsInClientInfo() {
 function registerButtonHandlers() {
     document.getElementById('openWindowButton').addEventListener('click', function() {
         liff.openWindow({
-            url: 'https://klinikodeliff.herokuapp.com/', // Isi dengan Endpoint URL aplikasi web Anda
+            url: 'https://nongkrong-kuy.herokuapp.com/', // Isi dengan Endpoint URL aplikasi web Anda
             external: true
         });
     });
@@ -113,6 +113,7 @@ function registerButtonHandlers() {
 
     document.getElementById('liffLoginButton').addEventListener('click', function() {
         if (!liff.isLoggedIn()) {
+            document.write("Anda beum login. Silahkan Login Dulu")
             liff.login();
         }
     });
