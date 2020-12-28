@@ -70,4 +70,3 @@ function kurang6(){
     }
 }
 
-document.getElementById("totalPesan").innerHTML = no1 + no2;

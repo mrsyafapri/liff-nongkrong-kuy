@@ -89,9 +89,9 @@ function displayIsInClientInfo() {
     if (liff.isInClient()) {
         document.getElementById('liffLoginButton').classList.toggle('hidden');
         document.getElementById('liffLogoutButton').classList.toggle('hidden');
-        document.getElementById('isInClientMessage').textContent = 'You are opening the app in the in-app browser of LINE.';
+        document.getElementById('isInClientMessage').textContent = 'Anda membuka aplikasi ini di browser dalam aplikasi LINE.';
     } else {
-        document.getElementById('isInClientMessage').textContent = 'You are opening the app in an external browser.';
+        document.getElementById('isInClientMessage').textContent = 'Anda membuka aplikasi ini di browser eksternal.';
     }
 }
 
@@ -130,9 +130,9 @@ function registerButtonHandlers() {
         } else {
             liff.sendMessages([{
                 'type': 'text',
-                'text': "Selamat! Anda telah menggunakan fitur Send Message!"
+                'text': "Hai Customers,\n\nTerima kasih telah memesan makanan dan minuman di Nongkrong Kuy, berikut adalah review pesanan Anda:\n\n<ul><li>0 Makanan</li><li>0 Minuman</li></ul>\n\n Pesanan Anda akan segera diproses dan akan diberitahu jika sudah bisa diambil.\n\n Mohon Ditunggu Ya!"
             }]).then(function() {
-                window.alert('Ini adalah pesan dari fitur Send Message');
+                window.alert('Terima kasih sudah memesan! Silahkan cek kembali pesanan Anda pada pesan yang dikirimkan');
             }).catch(function(error) {
                 window.alert('Error sending message: ' + error);
             });

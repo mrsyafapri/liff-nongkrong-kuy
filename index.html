@@ -20,7 +20,7 @@
             Nongkrong Kuy
         </h1>
         <br>
-        <p>Hi {}! Yuk Belanja. Silahkan Pilih menu dibawah</p>
+        <p>Hi Customer! Yuk Belanja. Silahkan Pilih menu dibawah</p>
     </div>
 
     <!-- Konten/Isi -->
@@ -28,51 +28,52 @@
     <div class ="m-5">
         <h5>Nasi Padang</h5>
         <p>10000</p>
-        <button class= "btn btn-primary" onClick="tambah1()"> Tambah </button>
+        <button class= "btn btn-success" onClick="tambah1()"> Tambah </button>
         <span class= "bg-dark text-white font-weight-bold p-2" id= "hasil1">0</span>
-        <button class= "btn btn-success" onClick="kurang1()"> Kurangi </button>
+        <button class= "btn btn-primary" onClick="kurang1()"> Kurangi </button>
     </div>
     <div class ="m-5">
         <h5>Ayam Geprek</h5>
         <p>15000</p>
-        <button class= "btn btn-primary" onClick="tambah2()"> Tambah </button>
+        <button class= "btn btn-success" onClick="tambah2()"> Tambah </button>
         <span class= "bg-dark text-white font-weight-bold p-2" id= "hasil2">0</span>
-        <button class= "btn btn-success" onClick="kurang2()"> Kurangi </button>
+        <button class= "btn btn-primary" onClick="kurang2()"> Kurangi </button>
     </div>
     <div class ="m-5">
         <h5>Nasi Goreng</h5>
         <p>12000</p>
-        <button class= "btn btn-primary" onClick="tambah3()"> Tambah </button>
+        <button class= "btn btn-success" onClick="tambah3()"> Tambah </button>
         <span class= "bg-dark text-white font-weight-bold p-2" id= "hasil3">0</span>
-        <button class= "btn btn-success" onClick="kurang3()"> Kurangi </button>
+        <button class= "btn btn-primary" onClick="kurang3()"> Kurangi </button>
     </div>
     <hr/>
     <h2>Minuman</h2>
     <div class ="m-5">
         <h5>Es Teh</h5>
         <p>3000</p>
-        <button class= "btn btn-primary" onClick="tambah4()"> Tambah </button>
+        <button class= "btn btn-success" onClick="tambah4()"> Tambah </button>
         <span class= "bg-dark text-white font-weight-bold p-2" id= "hasil4">0</span>
-        <button class= "btn btn-success" onClick="kurang4()"> Kurangi </button>
+        <button class= "btn btn-primary" onClick="kurang4()"> Kurangi </button>
     </div>
     <div class ="m-5">
         <h5>Milo Dingin</h5>
         <p>5000</p>
-        <button class= "btn btn-primary" onClick="tambah5()"> Tambah </button>
+        <button class= "btn btn-success" onClick="tambah5()"> Tambah </button>
         <span class= "bg-dark text-white font-weight-bold p-2" id= "hasil5">0</span>
-        <button class= "btn btn-success" onClick="kurang5()"> Kurangi </button>
+        <button class= "btn btn-primary" onClick="kurang5()"> Kurangi </button>
     </div>
     <div class ="m-5">
         <h5>Aneka Jus</h5>
         <p>8000</p>
-        <button class= "btn btn-primary" onClick="tambah6()"> Tambah </button>
+        <button class= "btn btn-success" onClick="tambah6()"> Tambah </button>
         <span class= "bg-dark text-white font-weight-bold p-2" id= "hasil6">0</span>
-        <button class= "btn btn-success" onClick="kurang6()"> Kurangi </button>
+        <button class= "btn btn-primary" onClick="kurang6()"> Kurangi </button>
     </div>
     <hr/>
-    <h2>Rincian Pemesanan</h2>
-    <p id="totalPesan">Total    : 0 makanan dan 0 minuman</p>
-    <p id="totalHarga">Harga    : 0</p>
+    <h2>Rincian Pesanan</h2>
+    <p id="totalPesan">Total : 0 makanan dan 0 minuman</p>
+    <p id="totalHarga">Harga : 0</p>
+    <button id="sendMessageButton" class="btn btn-success btn-small">Pesan Sekarang</button>
 
     <!--Konten LIFF v2-->
 
@@ -82,7 +83,6 @@
             <div class="buttonRow">
                 <button id="openWindowButton" class="btn btn-success btn-small">Open External Window</button>
                 <button id="closeWindowButton" class="btn btn-danger btn-small">Close LIFF App</button>
-                <button id="sendMessageButton" class="btn btn-warning btn-small">Send Message</button>
             </div>
 
         </div>
@@ -90,7 +90,7 @@
         <!-- LIFF DATA -->
         <div id="liffData">
             <br><br>
-            <h3 id="liffDataHeader" class="textLeft">Informasi:</h3>
+            <h3 id="liffDataHeader" class="textLeft">Informasi Pengguna:</h3>
             <table>
                 <tr>
                     <th>isInClient : </th>
