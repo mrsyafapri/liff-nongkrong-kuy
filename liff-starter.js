@@ -156,5 +156,3 @@ function toggleElement(elementId) {
         elem.style.display = 'block';
     }
 }
-
-registerButtonHandlers()
