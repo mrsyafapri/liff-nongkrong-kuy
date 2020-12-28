@@ -130,7 +130,7 @@ function registerButtonHandlers() {
         } else {
             liff.sendMessages([{
                 'type': 'text',
-                'text': "Hai Customers,\n\nTerima kasih telah memesan makanan dan minuman di Nongkrong Kuy, berikut adalah review pesanan Anda:\n\n<ul><li>0 Makanan</li><li>0 Minuman</li></ul>\n\n Pesanan Anda akan segera diproses dan akan diberitahu jika sudah bisa diambil.\n\n Mohon Ditunggu Ya!"
+                'text': 'Hai Customers,\n\nTerima kasih telah memesan makanan dan minuman di Nongkrong Kuy, berikut adalah review pesanan Anda:\n\n<ul><li>0 Makanan</li><li>0 Minuman</li></ul>\n\n Pesanan Anda akan segera diproses dan akan diberitahu jika sudah bisa diambil.\n\n Mohon Ditunggu Ya!'
             }]).then(function() {
                 window.alert('Terima kasih sudah memesan! Silahkan cek kembali pesanan Anda pada pesan yang dikirimkan');
             }).catch(function(error) {
