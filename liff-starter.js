@@ -176,6 +176,13 @@ function sendAlertIfNotInClient() {
 }
 
 /**
+* Toggle profile info field
+*/
+function toggleProfileData() {
+    toggleElement('profileInfo');
+}
+
+/**
 * Toggle specified element
 * @param {string} elementId The ID of the selected element
 */
