@@ -96,6 +96,7 @@ function displayIsInClientInfo() {
 }
 
 function registerButtonHandlers() {
+    // openWindow call
     document.getElementById('openWindowButton').addEventListener('click', function() {
         liff.openWindow({
             url: 'https://nongkrong-kuy.herokuapp.com/', // Isi dengan Endpoint URL aplikasi web Anda
@@ -103,6 +104,7 @@ function registerButtonHandlers() {
         });
     });
 
+    // closeWindow call
     document.getElementById('closeWindowButton').addEventListener('click', function() {
         if (!liff.isInClient()) {
             sendAlertIfNotInClient();
@@ -111,12 +113,15 @@ function registerButtonHandlers() {
         }
     });
 
+    // login call, only when external browser is used
     document.getElementById('liffLoginButton').addEventListener('click', function() {
         if (!liff.isLoggedIn()) {
+            // set `redirectUri` to redirect the user to a URL other than the front page of your LIFF app.
             liff.login();
         }
     });
 
+    // logout call only when external browse
     document.getElementById('liffLogoutButton').addEventListener('click', function() {
         if (liff.isLoggedIn()) {
             liff.logout();
@@ -124,6 +129,7 @@ function registerButtonHandlers() {
         }
     });
 
+    // sendMessages call
     document.getElementById('sendMessageButton').addEventListener('click', function() {
         if (!liff.isInClient()) {
             sendAlertIfNotInClient();
@@ -138,8 +144,33 @@ function registerButtonHandlers() {
             });
         }
     });
+
+    // get profile call
+    document.getElementById('getProfileButton').addEventListener('click', function() {
+        liff.getProfile().then(function(profile) {
+            document.getElementById('userIdProfileField').textContent = profile.userId;
+            document.getElementById('displayNameField').textContent = profile.displayName;
+
+            const profilePictureDiv = document.getElementById('profilePictureDiv');
+            if (profilePictureDiv.firstElementChild) {
+                profilePictureDiv.removeChild(profilePictureDiv.firstElementChild);
+            }
+            const img = document.createElement('img');
+            img.src = profile.pictureUrl;
+            img.alt = 'Profile Picture';
+            profilePictureDiv.appendChild(img);
+
+            document.getElementById('statusMessageField').textContent = profile.statusMessage;
+            toggleProfileData();
+        }).catch(function(error) {
+            window.alert('Error getting profile: ' + error);
+        });
+    });
 }
 
+/**
+* Alert the user if LIFF is opened in an external browser and unavailable buttons are tapped
+*/
 function sendAlertIfNotInClient() {
     alert('This button is unavailable as LIFF is currently being opened in an external browser.');
 }
