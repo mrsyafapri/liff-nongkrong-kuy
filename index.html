@@ -22,13 +22,27 @@
         <br>
         <div id="liffAppContent">
             <p>Hi <span id="displayNameField"></span>! Yuk Belanja. Silahkan Pilih menu dibawah.</p>
-            <button id="getProfileButton" class="btn btn-success">Klik Untuk Lihat Foto Profil Anda</button>
+            <button id="getProfileButton" class="btn btn-success">Klik Untuk Lihat Profil Anda</button>
             <!-- PROFILE INFO -->
             <div id="profileInfo" class="hidden textLeft">
-                <h2>Your Photo Profile</h2>
-                <a href="#" onclick="toggleProfileData()">Close Photo Profile</a>
+                <h2>Profile</h2>
+                <a href="#" onclick="toggleProfileData()">Close Profile</a>
                 <div id="profilePictureDiv">
                 </div>
+                <table>
+                    <tr>
+                        <th>userId</th>
+                        <td id="userIdProfileField"></td>
+                    </tr>
+                    <tr>
+                        <th>displayName</th>
+                        <td id="displayNameField"></td>
+                    </tr>
+                    <tr>
+                        <th>statusMessage</th>
+                        <td id="statusMessageField"></td>
+                    </tr>
+                </table>
             </div>
         </div>  
     </div>
