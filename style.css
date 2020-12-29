@@ -55,3 +55,17 @@ button {
 .hidden {
     display: none;
 }
+
+.myBrand {
+    color: white;
+    background-color: red;
+    padding: 20px 20px;
+    font-weight: bold;
+}
+
+.footer {
+    color: black;
+    background-color: grey;
+    padding: 20px 20px;
+    font-weight: bold;
+}
