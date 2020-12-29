@@ -136,16 +136,7 @@ function registerButtonHandlers() {
         } else {
             liff.sendMessages([{
                 'type': 'text',
-                'text': `Hai ${profile.displayName},
-
-Terima kasih telah memesan makanan dan minuman di Nongkrong Kuy, berikut adalah review pesanan Anda:
-
-* 0 Makanan
-* 0 Minuman
-
-Pesanan Anda akan segera diproses dan akan diberitahu jika sudah bisa diambil.
-
-Mohon Ditunggu Ya!`
+                'text': 'Hai Customers,\n\nTerima kasih telah memesan makanan dan minuman di Nongkrong Kuy, berikut adalah review pesanan Anda:\n\n* 0 Makanan\n* 0 Minuman\n\nPesanan Anda akan segera diproses dan akan diberitahu jika sudah bisa diambil.\n\nMohon Ditunggu Ya!'
             }]).then(function() {
                 window.alert('Terima kasih sudah memesan! Silahkan cek kembali pesanan Anda pada pesan yang dikirimkan');
             }).catch(function(error) {
